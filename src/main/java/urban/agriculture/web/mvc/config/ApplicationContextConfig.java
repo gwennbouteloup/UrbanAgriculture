@@ -19,7 +19,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import urban.agriculture.service.ServiceImpl_Business_InstallationType_OnGround;
-import urban.agriculture.service.UserService;
 
 @Configuration
 @ComponentScan("urban.agriculture")
@@ -79,12 +78,6 @@ public class ApplicationContextConfig {
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
 
 		return transactionManager;
-	}
-
-	@Autowired
-	@Bean(name = "userService")
-	public UserService getUserService(SessionFactory sessionFactory) {
-		return new UserService(sessionFactory);
 	}
 
 	@Autowired
