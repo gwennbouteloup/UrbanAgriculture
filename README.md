@@ -31,5 +31,5 @@ Running process
 1. Add Tomcat server pointing on your your tomcat instance
 2. Import the projet sources into eclipse
 3. Right click on prject and select run as / run on your tomcat server
-4. The web app is available in eclispe or in your favorite web browser on "http://localhost:8080/UrbanAgriculture-0.0.1-SNAPSHOT/" adress.
+4. The web app is available in eclispe or in your favorite web browser on "http://localhost:8080/UrbanAgriculture-0.0.1-SNAPSHOT/" address.
 
