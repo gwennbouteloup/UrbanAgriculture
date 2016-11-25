@@ -12,7 +12,7 @@ Instal PostgreSQL by downloading it from PostgreSQL web site
 
 Configuration
 =======================
-Environment systeme variables: 
+Environment system variables: 
 	CATALINA_HOME: put the location of your tomcat directory
 	JAVA_HOME: put the location of your installed jdk directory
 	PATH: Check that the location of your installed jdk directory is present
