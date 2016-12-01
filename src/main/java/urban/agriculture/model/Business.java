@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Urban agriculture business model definition
+ * Urban agriculture business urban.agriculture.model definition
  * 
  * @author Gwennaël Bouteloup
  */

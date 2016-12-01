@@ -3,7 +3,7 @@ package urban.agriculture.dao;
 import urban.agriculture.model.Business_InstallationType_OnGround;
 
 /**
- * Define the methods to implement by data model access classes
+ * Define the methods to implement by data urban.agriculture.model access classes
  * 
  * @author Gwennael Bouteloup
  *

@@ -10,7 +10,7 @@ import urban.agriculture.dao.impl.DAOImpl_Business_InstallationType_OnGround;
 import urban.agriculture.model.Business_InstallationType_OnGround;
 
 /**
- * Define the service layer methods for Business_InstallationType_OnGround type
+ * Define the urban.agriculture.service layer methods for Business_InstallationType_OnGround type
  * 
  * @author Gwennael Bouteloup
  *
