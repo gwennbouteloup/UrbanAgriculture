@@ -18,7 +18,8 @@ public class BusinessTypeOnGroundController {
 	@RequestMapping("/")
 	public ModelAndView handleRequest() throws Exception {
 		List<Business_InstallationType_OnGround> listBusinessInstTypeOnGround = serviceBuinessInstTypeOnGround.getAll();
-		ModelAndView model = new ModelAndView("ViewBusinessTypeOnGroundList");
+		//ModelAndView urban.agriculture.model = new ModelAndView("ViewBusinessTypeOnGroundList");
+		ModelAndView model = new ModelAndView("index");
 		model.addObject("viewListBusinessInstTypeOnGround", listBusinessInstTypeOnGround);
 		return model;
 	}

@@ -11,11 +11,18 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
 	// Static Resource Config
-	// equivalents for <mvc:resources/> tags
+	// equivalents for <mvc:> tags
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("resources/**").addResourceLocations(ConstantsUrban.resourcesForWebViewLocation)
-				.setCachePeriod(31556926);
+		registry.addResourceHandler("**").addResourceLocations(ConstantsUrban.resourcesRootForWebView);
+//		registry.addResourceHandler("/resources/css/**")
+//				.addResourceLocations(ConstantsUrban.cssResourcesRootForWebView);
+//		registry.addResourceHandler("/resources/fonts/**")
+//				.addResourceLocations(ConstantsUrban.fontsResourcesRootForWebView);
+//		registry.addResourceHandler("/resources/images/**")
+//				.addResourceLocations(ConstantsUrban.imagesResourcesRootForWebView);
+//		registry.addResourceHandler("/resources/js/**")
+//				.addResourceLocations(ConstantsUrban.javascriptResourcesRootForWebView);
 	}
 
 	// equivalent for <mvc:default-servlet-handler/> tag

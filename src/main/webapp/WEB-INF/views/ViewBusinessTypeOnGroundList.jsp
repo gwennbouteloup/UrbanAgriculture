@@ -28,8 +28,8 @@
 					<td>${businessInst.idCompanyLocation}</td>
 					<td>${businessInst.idBusiness}</td>
 					<td>${businessInst.idInstallationType}</td>
-					<td><a href="edit?id=${user.id}">Edit</a>
-						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${businessInst.idCompany}">Delete</a>
+					<td><a href="edit?id=${businessInst.idCompany}">Edit</a>
+						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${user.id}">Delete</a>
 					</td>
 				</tr>
 			</c:forEach>
