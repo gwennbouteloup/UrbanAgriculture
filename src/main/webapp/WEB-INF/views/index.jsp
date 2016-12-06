@@ -1,776 +1,563 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!--Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-<title>Vegetable Farm Flat bootstrap Responsive Website Template
-	| Home :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords"
-	content="Vegetable Farm Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta charset="utf-8">
+<title>Urban agriculture: how to create your own business.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Gwennaël Bouteloup design">
 
-<!-- css links -->
-<link href='<c:url value="/resources/css/bootstrap.min.csss" />'
-	type="text/css" media="all">
-<link href='<c:url value="/resources/css/font-awesome.min.css" />'
-	rel="stylesheet" type="text/css" media="all">
-<link href='<c:url value="/resources/css/caption-hover.css" />'
-	rel="stylesheet" type="text/css">
-<link href='<c:url value="/resources/css/circle-hover.css" />'
-	rel="stylesheet" type="text/css">
-<link href='<c:url value="/resources/css/slider.css" />'
-	rel="stylesheet" type="text/css" media="all">
-<link href='<c:url value="/resources/css/style.css" />' rel="stylesheet"
-	type="text/css" media="all">
-<!-- /css links -->
-
+<!-- google web fonts -->
 <link
-	href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900'
+	href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,500,400italic,700'
 	rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Poiret+One'
-	rel='stylesheet' type='text/css'>
-<script src='<c:url value="/resources/js/SmoothScroll.min.js"/>'></script>
-<script src='<c:url value="/resources/js/modernizr.custom.js"/>'
-	type="text/javascript">
-	
-</script>
+
+<!-- CSS Styles -->
+
+<!-- bootstrap css -->
+<link href='<c:url value="/resources/css/bootstrap.css"/>'
+	rel="stylesheet">
+
+<!-- custom css -->
+<link href='<c:url value="/resources/css/custom.css"/>' rel="stylesheet">
+
+<!-- standart theme css -->
+<link rel="stylesheet" id="theme"
+	href='<c:url value="/resources/css/theme1.css"/>' type="text/css" />
+
+<!-- Font Awesome Icons css -->
+<link rel="stylesheet"
+	href='<c:url value="/resources/font-awesome/css/font-awesome.min.css"/>'>
+
+<!-- BxSlider and Sequence Slider css -->
+<link rel="stylesheet"
+	href='<c:url value="/resources/css/jquery.bxslider.css"/>'
+	type="text/css" />
+<link rel="stylesheet" media="screen"
+	href='<c:url value="/resources/css/sequence-slider.css"/>'>
+
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet"
+	href='<c:url value="/resources/css/magnific-popup.css"/>'>
+
+<!-- Color Switch Panel css -->
+<link rel="stylesheet"
+	href='<c:url value="/resources/css/color.switch.css"/>' type="text/css" />
+
+<!-- Back to Top Button css -->
+<link rel="stylesheet" href='<c:url value="/resources/css/top.css"/>'
+	type="text/css" />
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="../js/html5shiv.js"></script>
+    <![endif]-->
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon"
+	href='<c:url value="/resources/img/favicon.ico"/>'>
+<link rel="apple-touch-icon"
+	href='<c:url value="/resources/img/apple-touch-icon.png"/>'>
+<link rel="apple-touch-icon" sizes="72x72"
+	href='<c:url value="/resources/img/apple-touch-icon-72x72.png"/>'>
+<link rel="apple-touch-icon" sizes="114x114"
+	href='<c:url value="/resources/img/apple-touch-icon-114x114.png" />'>
+
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar"
-	data-offset="60">
-	<!-- Fixed navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+<body>
+
+	<!-- START PRIMARY LAYOUT
+======================== -->
+
+	<!-- Back to Top Button (visible after scrolling 1200px down) Change Styles at the top.css file -->
+	<div class="button-top" id="top-bt">
+
+		<a href="#about"><i class="fa fa-sort-desc fa-3x"></i></a>
+
+	</div>
+	<!-- Back to Top Button END -->
+
+	<!-- NAVBAR -->
+	<!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation"
+		id="menu">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
 					<span class="sr-only">Toggle navigation</span> <span
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">Vegetable Farm</a>
+				<a class="navbar-brand" href="#"> <img
+					src='<c:url value="/resources/img/logo.png"/>' alt="" class="logo">
+				</a>
 			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="index.html">Home</a></li>
+			<!-- MENU LINKS -->
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav" id="navigation">
 					<li><a href="#about">About</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#team">The developper</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
-			<!--/.nav-collapse -->
 		</div>
 	</nav>
-	<!-- /Fixed navbar -->
-	<!-- Banner -->
-	<div class="banner">
-		<div id="content">
-			<div id="slider">
-				<img src='<c:url value="/resources/images/banner1.jpg" />'
-					alt="We Bring" data-url="#1"> <img
-					src='<c:url value="/resources/images/banner2.jpg" />'
-					alt="The Good" data-url="#2"> <img
-					src='<c:url value="/resources/images/banner3.jpg" />'
-					alt="Vegetable Farm" data-url="#3"> <img
-					src='<c:url value="/resources/images/banner4.jpg" />' alt="To Life"
-					data-url="#4">
+	<!-- NAVBAR END -->
+
+	<!-- SEQUENCE SLIDER Change Styles at the sequence-slider.css file -->
+	<div id="top-slider">
+		<div class="slider-bg"></div>
+		<div class="container">
+
+			<div id="sequence">
+
+				<img class="sequence-prev"
+					src='<c:url value="/resources/img/button-previous.svg"/>'
+					alt="Previous Frame" /> <img class="sequence-next"
+					src='<c:url value="/resources/img/button-next.svg"/>'
+					alt="Next Frame" />
+
+				<ul class="sequence-canvas">
+					<li class="animate-in">
+						<h2 class="title">Bootstrap 3</h2>
+						<h3 class="subtitle">Super Flat and modern One Page Website
+							Template</h3> <img class="slider-image"
+						src='<c:url value="/resources/img/slider/1.png"/>' alt="Image" />
+					</li>
+					<li>
+						<h2 class="title">Responsive Design</h2>
+						<h3 class="subtitle">Design is automatically adapted on all
+							Devices, with clean HTML5 and CSS3 Code</h3> <img class="slider-image"
+						src='<c:url value="/resources/img/slider/2.png"/>' alt="Image" />
+					</li>
+					<li>
+						<h2 class="title">Cross Browser</h2>
+						<h3 class="subtitle">Supports modern browsers, touch devices
+							and responsive designs</h3> <img class="slider-image"
+						src='<c:url value="/resources/img/slider/3.png"/>' alt="Image" />
+					</li>
+					<li>
+						<h2 class="title">Innovation inside</h2>
+						<h3 class="subtitle">Connected to a Spring MVC hibernate
+							architecture with a PostrgreSQL database</h3> <img
+						class="slider-image"
+						src='<c:url value="/resources/img/slider/2.png"/>' alt="Image" />
+					</li>
+				</ul>
+
+				<ul class="sequence-pagination">
+					<li><img
+						src='<c:url value="/resources/img/pagination-dot.svg"/>'
+						alt="Image" /></li>
+					<li><img
+						src='<c:url value="/resources/img/pagination-dot.svg"/>'
+						alt="Image" /></li>
+					<li><img
+						src='<c:url value="/resources/img/pagination-dot.svg"/>'
+						alt="Image" /></li>
+				</ul>
+
 			</div>
+
 		</div>
 	</div>
-	<!-- /Banner -->
-	<!-- About -->
-	<section class="about-us" id="about">
-		<h3 class="text-center slideanim">About Us</h3>
+	<!-- SEQUENCE SLIDER END -->
+
+	<!-- ABOUT THE PROJECT -->
+	<div id="about">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-lg-offset-2 slideanim">
-					<p>Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry. Lorem Ipsum has been the industry's standard
-						dummy text ever since the 1500s, when an unknown printer took a
-						galley of type and scrambled it to make a type specimen book.</p>
+				<div class="center-block head">
+					<div class="col-lg-12 col-md-12 col-xs-12">
+
+						<h1 class="">About the project</h1>
+						<hr class="head-border-white">
+						<p class="subhead" style="font-size: 20px;">The goal of the
+							project is to help people to build their own urban agriculture
+							business. The first thing to do, is to have a clear idea of what
+							is possible to do, and how is it possible to do it. These first
+							steps are very important, and we will try to provide you a clear
+							process to begin your business in the best conditions.</p>
+						<p class="subhead" style="font-size: 20px;">From a technical
+							point of view, this responsive website use the last versions of
+							J2EE technologies: java 1.8, maven 3.3.9, hibernate 5.2.4,
+							javax.servlet 3.1.0, mysql 6, slf4j 1.7.21. The architecture
+							follows a web mvc standard approach, using annotations without
+							xml for the entity beans.</p>
+					</div>
+
 				</div>
-				<div class="col-lg-4 slideanim">
-					<p>Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry. Lorem Ipsum has been the industry's standard
-						dummy text ever since the 1500s, when an unknown printer took a
-						galley of type and scrambled it to make a type specimen book.</p>
+
+				<div align="center">
+					<h1 style="font-size: 20px;">Following table gather
+						information from the database from the entity relationship
+						{Business;InstallationType;CompanyLocation}</</h1>
+
+					<table style="border: 1px solid black;" align="center">
+						<tbody style="font-size: 12px !important;">
+							<th style="border: 1px solid black;">Id company</th>
+							<th style="border: 1px solid black;">Id company location</th>
+							<th style="border: 1px solid black;">Id business</th>
+							<th style="border: 1px solid black;">Id installation type</th>
+
+							<c:forEach var="businessInst"
+								items="${viewListBusinessInstTypeOnGround}" varStatus="status">
+								<tr>
+									<td style="border: 1px solid black;">${businessInst.idCompany}</td>
+									<td style="border: 1px solid black;">${businessInst.idCompanyLocation}</td>
+									<td style="border: 1px solid black;">${businessInst.idBusiness}</td>
+									<td style="border: 1px solid black;">${businessInst.idInstallationType}</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
 				</div>
+
 			</div>
 		</div>
-	</section>
-	<div class="content-section-a">
+	</div>
+	<!-- ABOUT END -->
+
+
+	<!-- TEAM  -->
+	<div id="team">
+		<div class="container">
+
+			<div class="row">
+
+				<div class="center-block head">
+
+					<div class="col-lg-12 col-md-12 col-xs-12">
+
+						<h1 class="">About the developer</h1>
+						<hr class="head-border-white">
+						<p class="subhead">"L'art commence en imitant et s'achève en
+							innovant." - Mason Cooley, auteur américain -</p>
+						<p class="subhead">"L'innovation n'est pas un flash de génie.
+							C'est un travail difficile. Et ce travail devrait être organisé
+							comme une activité régulière de chaque unité de l'entreprise et
+							ce à chaque niveau du management" - Peter Drucker, théoricien du
+							management -</p>
+					</div>
+
+				</div>
+
+				<!-- TEAM MEMBER -->
+				<section id="about" class="container content-section text-center">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<h1 style="font-size: 20px;">Gwennaël Bouteloup</h1>
+							<p>Information system specialist with almost 10 years of
+								experience. Gwennaël has used several technologies like .Net,
+								Flex, C, C++, C#, VB, VBA, Netbeans, Eclipse, Visual Studio,
+								Oracle, PostgreSQL... He has a deep knowledge in object oriented
+								and model driven technologies. His favorite technologies are
+								inside J2EE world (Java, EJB, Hibernate, Spring, ...). He has
+								also a good knowledge in several methodologies (Merise, UML,
+								SOA, Scrum, ...) and in PLM (Windchill).</p>
+							<p class="social-team">
+								</a> <a class="linkedin" href="https://www.google.fr/"><i
+									class="fa fa-linkedin-square fa-1-5x"></i></a>
+							</p>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</div>
+	</div>
+	<!-- TEAM  END-->
+
+	<!-- CONTACT -->
+	<div id="contact">
+
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-sm-6">
-					<div class="content1">
-						<h3 class="section-heading slideanim">Vegetable Farm Building
-							a Better Tomorrow.</h3>
-						<hr class="section-heading-spacer slideanim">
-						<div class="clearfix"></div>
-						<p class="lead slideanim">Lorem Ipsum is simply dummy text of
-							the printing and typesetting industry. Lorem Ipsum has been the
-							industry's standard dummy text ever since the 1500s, when an
-							unknown printer took a galley of type and scrambled it to make a
-							type specimen book.</p>
+
+				<div class="center-block head">
+
+					<div class="col-lg-12 col-md-12 col-xs-12">
+
+						<h1>Get in Touch</h1>
+						<hr class="head-border-grey">
+						<p class="center"></p>
+
 					</div>
+
 				</div>
-				<div class="col-lg-5 col-lg-offset-2 col-sm-6 slideanim">
-					<ul class="grid cs-style">
-						<li>
-							<figure>
-								<img src='<c:url value="/resources/images/farm1.jpg" />' alt=""
-									class="img-responsive">
-								<figcaption>
-									<h3>Vegetable Farm</h3>
-									<p>Building a Better Tomorrow.</p>
-								</figcaption>
-							</figure>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="content-section-b">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6">
-					<div class="content2">
-						<h3 class="section-heading slideanim">Something Special About
-							The Vegetable Farm</h3>
-						<hr class="section-heading-spacer slideanim">
-						<div class="clearfix"></div>
-						<p class="lead slideanim">Lorem Ipsum is simply dummy text of
-							the printing and typesetting industry. Lorem Ipsum has been the
-							industry's standard dummy text ever since the 1500s, when an
-							unknown printer took a galley of type and scrambled it to make a
-							type specimen book.</p>
-					</div>
-				</div>
-				<div class="col-lg-5 col-sm-pull-6 col-sm-6 slideanim">
-					<ul class="grid cs-style">
-						<li>
-							<figure>
-								<img src='<c:url value="/resources/images/farm2.jpg" />' alt=""
-									class="img-responsive">
-								<figcaption>
-									<h3>Something Special</h3>
-									<p>About The Vegetable Farm</p>
-								</figcaption>
-							</figure>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="content-section-a">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-sm-6">
-					<div class="content3">
-						<h3 class="section-heading slideanim">Vegetable Farm The
-							Fresh Maker!</h3>
-						<hr class="section-heading-spacer slideanim">
-						<div class="clearfix"></div>
-						<p class="lead slideanim">Lorem Ipsum is simply dummy text of
-							the printing and typesetting industry. Lorem Ipsum has been the
-							industry's standard dummy text ever since the 1500s, when an
-							unknown printer took a galley of type and scrambled it to make a
-							type specimen book.</p>
-					</div>
-				</div>
-				<div class="col-lg-5 col-lg-offset-2 col-sm-6 slideanim">
-					<ul class="grid cs-style">
-						<li>
-							<figure>
-								<img src='<c:url value="/resources/images/farm3.jpg" />' alt=""
-									class="img-responsive">
-								<figcaption>
-									<h3>Vegetable Farm</h3>
-									<p>The Fresh Maker!</p>
-								</figcaption>
-							</figure>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /About -->
-	<!-- /Services -->
-	<section class="our-services" id="services">
-		<h3 class="text-center slideanim">Our Services</h3>
-		<ul class="ch-grid">
-			<li>
-				<div class="ch-item ch-img-1 slideanim">
-					<div class="ch-info-wrap">
-						<div class="ch-info">
-							<div class="ch-info-front ch-img-1"></div>
-							<div class="ch-info-back">
-								<h5>Vegetative Propagation</h5>
-								<p>Using Advanced Scientific Techniques</p>
+
+				<!-- CONTACT FORM -->
+				<div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2 form">
+					<!--FORM -->
+					<form action="/resources/contact.php" class="form-horizontal"
+						role="form" id="contactForm" method="post" name="contactForm">
+
+						<div class="form-group">
+
+							<div class="col-sm-12">
+								<input type="text" class="form-control input-lg" name="name"
+									id="name" placeholder="Name*">
 							</div>
 						</div>
-					</div>
-				</div>
-				<h4 class="slideanim">Vegetative Propagation</h4>
-				<p class="slideanim">Using Advanced Scientific Techniques</p>
-			</li>
-			<li>
-				<div class="ch-item ch-img-2 slideanim">
-					<div class="ch-info-wrap">
-						<div class="ch-info">
-							<div class="ch-info-front ch-img-2"></div>
-							<div class="ch-info-back">
-								<h5>Irrigation</h5>
-								<p>Advanced Irrigation Techniques</p>
+
+						<div class="form-group">
+
+							<div class="col-sm-12">
+								<input type="email" class="form-control input-lg" name="email"
+									id="email" placeholder="Email*">
 							</div>
 						</div>
-					</div>
-				</div>
-				<h4 class="slideanim">Irrigation</h4>
-				<p class="slideanim">Using Advanced Irrigation Techniques</p>
-			</li>
-			<li>
-				<div class="ch-item ch-img-3 slideanim">
-					<div class="ch-info-wrap">
-						<div class="ch-info">
-							<div class="ch-info-front ch-img-3"></div>
-							<div class="ch-info-back">
-								<h5>Tools-Machinery</h5>
-								<p>Using Advanced Tools & Machinery</p>
+
+						<div class="form-group">
+
+							<div class="col-sm-12">
+								<input type="text" class="form-control input-lg" name="phone"
+									id="phone" placeholder="Phone">
 							</div>
 						</div>
-					</div>
-				</div>
-				<h4 class="slideanim">Tools-Machinery</h4>
-				<p class="slideanim">Using Advanced Tools & Machinery</p>
-			</li>
-			<li>
-				<div class="ch-item ch-img-4 slideanim">
-					<div class="ch-info-wrap">
-						<div class="ch-info">
-							<div class="ch-info-front ch-img-4"></div>
-							<div class="ch-info-back">
-								<h5>End Of Harvest</h5>
-								<p>Advanced Harvesting Techniques</p>
+
+						<div class="form-group">
+
+							<div class="col-sm-12">
+								<textarea class="form-control input-lg" rows="10" name="message"
+									id="message" placeholder="Message*"></textarea>
 							</div>
 						</div>
-					</div>
-				</div>
-				<h4 class="slideanim">End Of Harvest</h4>
-				<p class="slideanim">Using Advanced Harvesting Techniques</p>
-			</li>
-		</ul>
-	</section>
-	<!-- /Services -->
-	<!-- Portfolio Grid Section -->
-	<section id="portfolio">
-		<h3 class="text-center slideanim">Our Portfolio</h3>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
-					<a href="#portfolioModal1" class="portfolio-link"
-						data-toggle="modal">
-						<div class="caption">
-							<div class="caption-content">
-								<i class="fa fa-paper-plane-o"></i>
-							</div>
-						</div> <img src='<c:url value="/resources/images/port1.jpg" />'
-						class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
-					<a href="#portfolioModal2" class="portfolio-link"
-						data-toggle="modal">
-						<div class="caption">
-							<div class="caption-content">
-								<i class="fa fa-paper-plane-o"></i>
-							</div>
-						</div> <img src='<c:url value="/resources/images/port2.jpg" />'
-						class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
-					<a href="#portfolioModal3" class="portfolio-link"
-						data-toggle="modal">
-						<div class="caption">
-							<div class="caption-content">
-								<i class="fa fa-paper-plane-o"></i>
-							</div>
-						</div> <img src='<c:url value="/resources/images/port3.jpg" />'
-						class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
-					<a href="#portfolioModal4" class="portfolio-link"
-						data-toggle="modal">
-						<div class="caption">
-							<div class="caption-content">
-								<i class="fa fa-paper-plane-o"></i>
-							</div>
-						</div> <img src='<c:url value="/resources/images/port4.jpg" />'
-						class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
-					<a href="#portfolioModal5" class="portfolio-link"
-						data-toggle="modal">
-						<div class="caption">
-							<div class="caption-content">
-								<i class="fa fa-paper-plane-o"></i>
-							</div>
-						</div> <img src='<c:url value="/resources/images/port5.jpg" />'
-						class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
-					<a href="#portfolioModal6" class="portfolio-link"
-						data-toggle="modal">
-						<div class="caption">
-							<div class="caption-content">
-								<i class="fa fa-paper-plane-o"></i>
-							</div>
-						</div> <img src='<c:url value="/resources/images/port6.jpg" />'
-						class="img-responsive" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- /Portfolio Grid Section -->
-	<!-- Portfolio Modals -->
-	<div class="portfolio-modal modal fade slideanim" id="portfolioModal1"
-		tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl"></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<h3>Vegetable Farm</h3>
-							<hr>
-							<img src='<c:url value="/resources/images/port1.jpg" />'
-								class="img-responsive img-centered" alt="">
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry. Lorem Ipsum has been the industry's
-								standard dummy text ever since the 1500s, when an unknown
-								printer took a galley of type and scrambled it to make a type
-								specimen book.</p>
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">
-								<i class="fa fa-times"></i> Close
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="portfolio-modal modal fade slideanim" id="portfolioModal2"
-		tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl"></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<h3>Vegetable Farm</h3>
-							<hr>
-							<img src='<c:url value="/resources/images/port2.jpg" />'
-								class="img-responsive img-centered" alt="">
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry. Lorem Ipsum has been the industry's
-								standard dummy text ever since the 1500s, when an unknown
-								printer took a galley of type and scrambled it to make a type
-								specimen book.</p>
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">
-								<i class="fa fa-times"></i> Close
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="portfolio-modal modal fade slideanim" id="portfolioModal3"
-		tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl"></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<h3>Vegetable Farm</h3>
-							<hr>
-							<img src='<c:url value="/resources/images/port3.jpg" />'
-								class="img-responsive img-centered" alt="">
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry. Lorem Ipsum has been the industry's
-								standard dummy text ever since the 1500s, when an unknown
-								printer took a galley of type and scrambled it to make a type
-								specimen book.</p>
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">
-								<i class="fa fa-times"></i> Close
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="portfolio-modal modal fade slideanim" id="portfolioModal4"
-		tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl"></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<h3>Vegetable Farm</h3>
-							<hr>
-							<img src='<c:url value="/resources/images/port4.jpg" />'
-								class="img-responsive img-centered" alt="">
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry. Lorem Ipsum has been the industry's
-								standard dummy text ever since the 1500s, when an unknown
-								printer took a galley of type and scrambled it to make a type
-								specimen book.</p>
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">
-								<i class="fa fa-times"></i> Close
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="portfolio-modal modal fade slideanim" id="portfolioModal5"
-		tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl"></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<h3>Vegetable Farm</h3>
-							<hr>
-							<img src='<c:url value="/resources/images/port5.jpg" />'
-								class="img-responsive img-centered" alt="">
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry. Lorem Ipsum has been the industry's
-								standard dummy text ever since the 1500s, when an unknown
-								printer took a galley of type and scrambled it to make a type
-								specimen book.</p>
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">
-								<i class="fa fa-times"></i> Close
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="portfolio-modal modal fade slideanim" id="portfolioModal6"
-		tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl"></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<h3>Vegetable Farm</h3>
-							<hr>
-							<img src='<c:url value="/resources/images/port6.jpg" />'
-								class="img-responsive img-centered" alt="">
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry. Lorem Ipsum has been the industry's
-								standard dummy text ever since the 1500s, when an unknown
-								printer took a galley of type and scrambled it to make a type
-								specimen book.</p>
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">
-								<i class="fa fa-times"></i> Close
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /Portfolio Modals -->
-	<!-- Blog -->
-	<section class="our-blog" id="blog">
-		<h3 class="text-center slideanim">Our Blog</h3>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-xs-12">
-					<div class="view view-seventh slideanim">
-						<img src='<c:url value="/resources/images/blog1.jpg" />' alt=""
-							class="img-responsive">
-						<div class="mask">
-							<h5>January 2,2016</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry.</p>
-							<a href="#contact-info" class="info">Write To Us</a>
-						</div>
-					</div>
-					<div class="blog-content slideanim">
-						<p class="p1">News - January 2,2016</p>
-						<a href="#"><h4>Its The Vegetable Farm You Can See.</h4></a>
-						<p class="p2">Lorem Ipsum is simply dummy text of the printing
-							and typesetting industry.</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-12">
-					<div class="view view-seventh slideanim">
-						<img src='<c:url value="/resources/images/blog2.jpg" />' alt=""
-							class="img-responsive">
-						<div class="mask">
-							<h5>January 10,2016</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry.</p>
-							<a href="#contact-info" class="info">Write To Us</a>
-						</div>
-					</div>
-					<div class="blog-content slideanim">
-						<p class="p1">News - January 10,2016</p>
-						<a href="#"><h4>A Day With Vegetable Farm.</h4></a>
-						<p class="p2">Lorem Ipsum is simply dummy text of the printing
-							and typesetting industry.</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-12">
-					<div class="view view-seventh slideanim">
-						<img src='<c:url value="/resources/images/blog3.jpg" />' alt=""
-							class="img-responsive">
-						<div class="mask">
-							<h5>January 15,2016</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry.</p>
-							<a href="#contact-info" class="info">Write To Us</a>
-						</div>
-					</div>
-					<div class="blog-content slideanim">
-						<p class="p1">News - January 15,2016</p>
-						<a href="#"><h4>Vegetable Farm For All.</h4></a>
-						<p class="p2">Lorem Ipsum is simply dummy text of the printing
-							and typesetting industry.</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-12">
-					<div class="view view-seventh slideanim">
-						<img src='<c:url value="/resources/images/blog4.jpg" />' alt=""
-							class="img-responsive">
-						<div class="mask">
-							<h5>January 20,2016</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry.</p>
-							<a href="#contact-info" class="info">Write To Us</a>
-						</div>
-					</div>
-					<div class="blog-content slideanim">
-						<p class="p1">News - January 20,2016</p>
-						<a href="#"><h4>Vegetable Farm For Your Life.</h4></a>
-						<p class="p2">Lorem Ipsum is simply dummy text of the printing
-							and typesetting industry.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- /Blog -->
-	<!-- Contact-Us -->
-	<section class="contact-us" id="contact">
-		<h3 class="text-center slideanim">
-			Contact Us
-			</h2>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-xs-12 slideanim">
-						<iframe class="googlemaps"
-							src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d380510.6741687111!2d-88.01234121699822!3d41.83390417061058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1455598377120"
-							frameborder="0" style="border: 0" allowfullscreen></iframe>
-					</div>
-					<div class="col-md-4 col-xs-12 slideanim">
-						<h4>Our Contacts :</h4>
-						<p>Phone:123.456.7890</p>
-						<p>
-							Email:<a href="mailto:name@example.com">name@example.com</a>
-						</p>
-						<p>Address:3481 Melrose Place,Beverly Hills, Chicago 90210.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-	</section>
-	<!-- /Contact-Us -->
-	<!-- Contact-Form -->
-	<section class="contact-form slideanim">
-		<h3 class="text-center">Contact Form</h3>
-		<p class="text-center">Lorem Ipsum is simply dummy text of the
-			printing and typesetting industry.</p>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<form role="form">
-						<div class="row">
-							<div class="form-group col-lg-4">
-								<label>Name</label> <input type="text" class="form-control">
-							</div>
-							<div class="form-group col-lg-4">
-								<label>Email Address</label> <input type="email"
-									class="form-control">
-							</div>
-							<div class="form-group col-lg-4">
-								<label>Phone Number</label> <input type="tel"
-									class="form-control">
-							</div>
-							<div class="clearfix"></div>
-							<div class="form-group col-lg-12">
-								<label>Message</label>
-								<textarea class="form-control" rows="6"></textarea>
-							</div>
-							<div class="form-group col-lg-12">
-								<button type="submit" href="#" class="btn btn-lg btn-outline">Submit</button>
-							</div>
-						</div>
+
+						<!-- 						<div class="control-group submit center"> -->
+						<!-- 							<input class="btn btn-lg btn-primary" type="submit" -->
+						<!-- 								value="Submit" -->
+						<!-- 								onclick="window.location='https://www.google.com';"> -->
+						<!-- 						</div> -->
+
 					</form>
+
+					<p class="d-grey requi">* Required</p>
+
 				</div>
+
 			</div>
 		</div>
-	</section>
-	<!-- /Contact-Form -->
-	<!-- Footer -->
-	<footer class="text-center slideanim slide">
-		<div class="footer-above">
-			<div class="container">
+	</div>
+	<!-- CONTACT END -->
+
+	<!-- GOING UP ARROW -->
+	<div class="col-lg-12">
+		<div class="up">
+			<a href="#about"><span class="glyphicon glyphicon-chevron-up"></span></a>
+		</div>
+	</div>
+	<!-- GOING UP ARROW END -->
+
+	<!-- BOTTOM -->
+	<div id="foot">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-4 col-md-4">
+					<div class="bottom-con">
+
+						<h5>Visit Us</h5>
+						<hr class="head-border-white">
+
+						<div class="">
+							<p>
+								<i class="fa fa-location-arrow"><span> Martigues</span></i>
+							</p>
+							<p>
+								<i class="fa fa-map-marker"><span> Somewhere</span></i>
+							</p>
+							<p>
+								<i class="fa fa-flag"><span> France</span></i>
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4">
+					<div class="bottom-con">
+
+						<h5>Write Us</h5>
+						<hr class="head-border-white">
+
+						<div class="">
+							<p>
+								<i class="fa fa-phone"><span> TBD</span></i>
+							</p>
+							<p>
+								<i class="fa fa-envelope"><span>
+										gwennbouteloup@gmail.com</span></i>
+							</p>
+							<p>
+								<i class="fa fa-print"><span> TBD</span></i>
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4">
+
+					<div class="bottom-con">
+
+						<h5>Newsletter</h5>
+						<hr class="head-border-white">
+
+						<form action="#" method="post" class="newsletter">
+							<div class="input-group">
+								<span class="input-group-addon .glyphicon-envelope"><i
+									class="fa fa-envelope orange"></i></span> <input type="email"
+									class="form-control input-md" placeholder="Enter email">
+							</div>
+							<br>
+
+							<div class="control-group submit center">
+								<input type="submit" value="Subscribe Now!"
+									class="btn btn-md btn-primary" />
+							</div>
+
+						</form>
+
+					</div>
+
+				</div>
+
+				<div class="col-lg-12 col-md-12 footer">
+					<p class="pull-right">
+						<a href="#about">Back to top</a>
+					</p>
+					<p>
+						&copy; 2016 © Gwennaël Bouteloup . &middot; <a href="#">Privacy</a>
+						&middot; <a href="#">Terms</a>
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- FOOTER END -->
+
+	<!-- COLOR SWITCH. Change Styles at the color.switch.css file -->
+	<div class="editor">
+
+		<div class="panel">
+
+			<h5>Choose your Color</h5>
+
+			<div id="changecss">
+
 				<div class="row">
-					<div class="footer-col col-md-4">
-						<h4>Location</h4>
-						<p>
-							3481 Melrose Place<br>Beverly Hills, Chicago 90210
-						</p>
+
+					<div class="circle-skin">
+						<a href="javascript: void(0)" title="switch styling" id="theme1"><div
+								class="left skin1-l"></div>
+							<div class="right skin1-r"></div></a>
 					</div>
-					<div class="footer-col col-md-4">
-						<h4>Around the Web</h4>
-						<ul class="list-inline">
-							<li><a href="#" class="btn-social btn-outline"><i
-									class="fa fa-fw fa-facebook"></i></a></li>
-							<li><a href="#" class="btn-social btn-outline"><i
-									class="fa fa-fw fa-google-plus"></i></a></li>
-							<li><a href="#" class="btn-social btn-outline"><i
-									class="fa fa-fw fa-twitter"></i></a></li>
-							<li><a href="#" class="btn-social btn-outline"><i
-									class="fa fa-fw fa-linkedin"></i></a></li>
-							<li><a href="#" class="btn-social btn-outline"><i
-									class="fa fa-fw fa-dribbble"></i></a></li>
-						</ul>
+
+					<div class="circle-skin">
+						<a href="javascript: void(0)" title="switch styling" id="theme2"><div
+								class="left skin2-l"></div>
+							<div class="right skin2-r"></div></a>
 					</div>
-					<div class="footer-col col-md-4">
-						<h4>About Vegetable Farm</h4>
-						<p>Lorem Ipsum is simply dummy text of the printing and
-							typesetting industry. Lorem Ipsum has been the industry's
-							standard dummy text ever since the 1500s.</p>
+
+					<div class="circle-skin">
+						<a href="javascript: void(0)" title="switch styling" id="theme3"><div
+								class="left skin3-l"></div>
+							<div class="right skin3-r"></div></a>
 					</div>
+
+					<div class="circle-skin">
+						<a href="javascript: void(0)" title="switch styling" id="theme4"><div
+								class="left skin4-l"></div>
+							<div class="right skin4-r"></div></a>
+					</div>
+
+					<div class="circle-skin">
+						<a href="javascript: void(0)" title="switch styling" id="theme5"><div
+								class="left skin5-l"></div>
+							<div class="right skin5-r"></div></a>
+					</div>
+
+					<div class="circle-skin">
+						<a href="javascript: void(0)" title="switch styling" id="theme6"><div
+								class="left skin6-l"></div>
+							<div class="right skin6-r"></div></a>
+					</div>
+
 				</div>
+
 			</div>
+
+			<div class="clearfix"></div>
+
+
 		</div>
-		<div class="footer-below">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<p>
-							© 2016 Vegetable Farm. All Rights Reserved | Design by <a
-								href="https://w3layouts.com/" target="_blank">W3layouts</a>
-						</p>
-					</div>
-				</div>
-			</div>
-			<a href="#myPage" title="To Top"> <span
-				class="glyphicon glyphicon-chevron-up"></span>
-			</a>
+
+		<div class="switch">
+			<i class="fa fa-cog fa-spin fa-2x"></i>
 		</div>
-	</footer>
-	<!-- js files -->
-	<script src='<c:url value="/resources/js/jquery.min.js"/>'></script>
-	<script src='<c:url value="/resources/js/bootstrap.min.js"/>'></script>
-	<script src='<c:url value="/resources/js/classie.js"/>'></script>
-	<script src='<c:url value="/resources/js/TweenMax.min.j"/>'></script>
-	<script src='<c:url value="/resources/js/index.js"/>'></script>
-	<script src='<c:url value="/resources/js/index2.js"/>'></script>
-	<script>
-		$(document).ready(
-				function() {
-					// Add smooth scrolling to all links in navbar + footer link
-					$(".navbar a, footer a[href='#myPage']").on('click',
-							function(event) {
 
-								// Store hash
-								var hash = this.hash;
+	</div>
+	<!-- COLOR SWITCH END -->
+	<!-- END PRIMARY LAYOUT
+====================== -->
 
-								// Using jQuery's animate() method to add smooth page scroll
-								// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-								$('html, body').animate({
-									scrollTop : $(hash).offset().top,
-								}, 900, function() {
 
-									// Add hash (#) to URL when done scrolling (default click behavior)
-									window.location.hash = hash;
-								});
-							});
-				})
-	</script>
-	<script>
-		$(window).scroll(function() {
-			$(".slideanim").each(function() {
-				var pos = $(this).offset().top;
+	<!-- JAVASCRIPT
+================================================== -->
+	<!-- BOOTSTRAP JAVASCRIPT -->
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/bootstrap.min.js"/>'></script>
 
-				var winTop = $(window).scrollTop();
-				if (pos < winTop + 600) {
-					$(this).addClass("slide");
-				}
-			});
-		});
-	</script>
-	<!-- /js files -->
+	<!-- CUSTOM JAVASCRIPT -->
+	<!-- Custom Functions -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/functions.js"/>'></script>
+
+	<!-- Portfolio with mixitup filter and prettyphoto -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/jquery.mixitup.min.js"/>'></script>
+	<!-- Magnific Popup core JS file -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/magnific.js"/>'></script>
+
+	<!-- BxSlider -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/jquery.bxslider.min.js"/>'></script>
+
+	<!-- Sequence Slider -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/jquery.sequence-min.js"/>'></script>
+
+	<!-- Parallax Background -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/nbw-parallax.js"/>'></script>
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/jquery.inview.js"/>'></script>
+
+	<!-- Smooth Scrolling -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/smoothscroll.js"/>'></script>
+
+	<!-- Sticky Navigation -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/jquery.sticky.js"/>'></script>
+
+	<!-- Style Switcher -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/jquery.style-switcher.js"/>'></script>
+
+	<!-- Clients Slider -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/jquery.flexisel.js"/>'></script>
+
+	<!-- Retina JS -->
+	<script type="text/javascript"
+		src='<c:url value="/resources/js/retina-1.1.0.min.js"/>'></script>
 </body>
 </html>
-
-
