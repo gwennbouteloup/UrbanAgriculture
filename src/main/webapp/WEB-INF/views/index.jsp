@@ -186,7 +186,8 @@
 							J2EE technologies: java 1.8, maven 3.3.9, hibernate 5.2.4,
 							javax.servlet 3.1.0, mysql 6, slf4j 1.7.21. The architecture
 							follows a web mvc standard approach, using annotations without
-							xml for the entity beans.</p>
+							xml for the entity beans. The Mysql database is composed of 24
+							tables.</p>
 					</div>
 
 				</div>
