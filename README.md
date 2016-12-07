@@ -5,26 +5,26 @@ Please contact Gwenn to know more about this project :)
 
 Installation
 =======================
-Instal last JRE and last JDK from Oracle web site
-Download Tomcat on Apache web site and decompress it on a locale file
-Instal Eclipse J2ee last version
-Instal PostgreSQL by downloading it from PostgreSQL web site
+.Instal last JRE and last JDK from Oracle web site
+.Download Tomcat on Apache web site and decompress it on a locale file (for example i did it on C:\INSTALLS\apache-tomcat-9.0.0.M10)
+.Instal Eclipse J2ee last version
+.Instal PostgreSQL by downloading it from PostgreSQL web site
 
 Configuration
 =======================
-Environment system variables: 
+.Environment system variables: 
 	CATALINA_HOME: put the location of your tomcat directory
 	JAVA_HOME: put the location of your installed jdk directory
 	PATH: Check that the location of your installed jdk directory is present
 	
-Eclipse JDK: 
+.Eclipse JDK: 
 	In eclipse in Window menu/Java/Installed JREs: Add a reference to the jre directory inside your jdk directory (for example C:\Program Files (x86)\Java\jdk1.8.0_102\jre). 
 		Select this reference to be the one to use.
 	
-Open PostgreSQL. Run the database script creation using the "Create database script.sql" file inside database directory.
-Run PostgreSQL server with an instance of the database.
+.Open PostgreSQL. Run the database script creation using the "Create database script.sql" file inside database directory.
+.Run PostgreSQL server with an instance of the database.
 
-Then run this configuration and enjoy!!! :)
+.Then run this configuration and enjoy!!! :)
 
 Running process
 =======================
