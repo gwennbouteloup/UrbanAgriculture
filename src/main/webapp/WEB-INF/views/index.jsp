@@ -182,8 +182,9 @@
 							steps are very important, and we will try to provide you a clear
 							process to begin your business in the best conditions.</p>
 						<p class="subhead" style="font-size: 20px;">From a technical
-							point of view, this responsive website use the last versions of
-							J2EE technologies: java 1.8, maven 3.3.9, hibernate 5.2.4,
+							point of view, this responsive website use the last web design
+							frameworks: bootstrap, HTML 5, CSS3 and the last versions of J2EE
+							technologies: java 1.8, maven 3.3.9, hibernate 5.2.4,
 							javax.servlet 3.1.0, mysql 6, slf4j 1.7.21. The architecture
 							follows a web mvc standard approach, using annotations without
 							xml for the entity beans. The Mysql database is composed of 24
@@ -258,9 +259,12 @@
 								and model driven technologies. His favorite technologies are
 								inside J2EE world (Java, EJB, Hibernate, Spring, ...). He has
 								also a good knowledge in several methodologies (Merise, UML,
-								SOA, Scrum, ...) and in PLM (Windchill).</p>
+								SOA, Scrum, ...) and in PLM (Windchill). He is also experienced
+								in Business Consulting and in project management. To know more
+								about Gwennaël expertise, go on his linkedin profile.</p>
 							<p class="social-team">
-								</a> <a class="linkedin" href="https://www.google.fr/"><i
+								</a> <a class="linkedin"
+									href="https://www.linkedin.com/profile/preview?trk=prof-0-sb-preview-primary-button&locale=fr_FR"><i
 									class="fa fa-linkedin-square fa-1-5x"></i></a>
 							</p>
 						</div>
