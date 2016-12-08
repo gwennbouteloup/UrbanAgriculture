@@ -142,8 +142,7 @@
 					<li>
 						<h2 class="title">Innovation inside</h2>
 						<h3 class="subtitle">Connected to a Spring MVC hibernate
-							architecture with a PostrgreSQL database</h3> <img
-						class="slider-image"
+							architecture with a MySQL database</h3> <img class="slider-image"
 						src='<c:url value="/resources/img/slider/2.png"/>' alt="Image" />
 					</li>
 				</ul>
