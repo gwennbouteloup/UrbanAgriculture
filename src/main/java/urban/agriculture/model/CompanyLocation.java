@@ -1,51 +1,52 @@
 package urban.agriculture.model;
 
 /**
- * Do the link  between companies and corresponding locations
+ * Do the link between companies and corresponding locations
  * 
- * @author Gwennaël Bouteloup
+ * @author Gwennael Bouteloup
  */
-public class CompanyLocation {
+public abstract class CompanyLocation {
 	// Attributes
 	private Company company;
 	private InstallationLocation installationLocation;
-    private String responsibleFirstName;
-    private String responsibleName;
-    private String phoneNumber;
-    private Integer employeesNumber;
-    private String description;
+	private String responsibleFirstName;
+	private String responsibleName;
+	private String phoneNumber;
+	private Integer employeesNumber;
+	private String description;
 
-    // Methods
-    // Constructors
-    /**
-     * Default constructor
-     */
-    public CompanyLocation() {
-    }
-    
-    /**
-     * Fill all attributes constructor
-     * @param company
-     * @param installationLocation
-     * @param responsibleFirstName
-     * @param responsibleName
-     * @param phoneNumber
-     * @param employeesNumber
-     * @param description
-     */
-    public CompanyLocation(Company company,	 InstallationLocation installationLocation, 
-    		String responsibleFirstName, String responsibleName,String phoneNumber, Integer employeesNumber, String description){
-    	this.setCompany(company);
-    	this.setDescription(description);
-    	this.setEmployeesNumber(employeesNumber);
-    	this.setInstallationLocation(installationLocation);
-    	this.setPhoneNumber(phoneNumber);
-    	this.setResponsibleFirstName(responsibleFirstName);
-    	this.setResponsibleName(responsibleName);
-    }
-    		
-    // Getters and setters
-    public Company getCompany() {
+	// Methods
+	// Constructors
+	/**
+	 * Default constructor
+	 */
+	public CompanyLocation() {
+	}
+
+	/**
+	 * Fill all attributes constructor
+	 * 
+	 * @param company
+	 * @param installationLocation
+	 * @param responsibleFirstName
+	 * @param responsibleName
+	 * @param phoneNumber
+	 * @param employeesNumber
+	 * @param description
+	 */
+	public CompanyLocation(Company company, InstallationLocation installationLocation, String responsibleFirstName,
+			String responsibleName, String phoneNumber, Integer employeesNumber, String description) {
+		this.setCompany(company);
+		this.setDescription(description);
+		this.setEmployeesNumber(employeesNumber);
+		this.setInstallationLocation(installationLocation);
+		this.setPhoneNumber(phoneNumber);
+		this.setResponsibleFirstName(responsibleFirstName);
+		this.setResponsibleName(responsibleName);
+	}
+
+	// Getters and setters
+	public Company getCompany() {
 		return company;
 	}
 
@@ -100,5 +101,5 @@ public class CompanyLocation {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-    
+
 }
