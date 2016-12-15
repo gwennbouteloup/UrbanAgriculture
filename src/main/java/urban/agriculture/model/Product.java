@@ -1,37 +1,56 @@
 package urban.agriculture.model;
 
-/**
- * The product(s)
- * 
- * @author Gwennaël Bouteloup
- */
-public abstract class Product {
-	// Attributes
-    private Integer id;
-    private String name;
-    private String description;
-    
-    // Methods
-    // Constructors
-    /**
-     * Default constructor
-     */
-    public Product() {
-    }
+import java.io.Serializable;
 
-    /**
-     * Fill all attributes constructor
-     * @param id
-     * @param name
-     * @param description
-     */
-    public Product(Integer id,String name,String description) {
-    	this.id = id;
-    	this.name = name;
-    	this.description = description;
-    }
-    
-    // Getters and setters
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+/**
+ * The product(s): The reason to be of your urban agriculture business
+ * 
+ * @author Gwennael Bouteloup
+ */
+
+@MappedSuperclass
+@SuppressWarnings("serial")
+public abstract class Product implements Serializable {
+	// Attributes
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", updatable = false, nullable = false)
+	private Integer id;
+
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "description")
+	private String description;
+
+	// Methods
+	// Constructors
+	/**
+	 * Default constructor
+	 */
+	public Product() {
+	}
+
+	/**
+	 * Fill all attributes constructor
+	 * 
+	 * @param id
+	 * @param name
+	 * @param description
+	 */
+	public Product(Integer id, String name, String description) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+	}
+
+	// Getters and setters
 	public Integer getId() {
 		return id;
 	}

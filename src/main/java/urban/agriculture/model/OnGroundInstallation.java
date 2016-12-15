@@ -1,16 +1,17 @@
 package urban.agriculture.model;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * Specific type of installation
  * 
- * @author Gwennaël Bouteloup
+ * @author Gwennael Bouteloup
  */
+@Entity
+@Embeddable
+@Table(name = "OnGroundInstallation")
+@SuppressWarnings("serial")
 public class OnGroundInstallation extends InstallationLocation {
-
-    /**
-     * Default constructor
-     */
-    public OnGroundInstallation() {
-    }
-
 }

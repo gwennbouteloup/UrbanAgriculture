@@ -1,37 +1,57 @@
 package urban.agriculture.model;
 
-/**
- * Business objective descriptions
- * 
- * @author Gwennaël Bouteloup
- */
-public class Objective {
-	// Attributes
-    private Integer id;
-    private String name;
-    private String description;
-    
-    // Methods
-    // Constructors
-    /**
-     * Default constructor
-     */
-    public Objective() {
-    }
-    
-    /**
-     * Fill all attributes constructor
-     * @param id
-     * @param name
-     * @param description
-     */
-    public Objective(Integer id,String name,String description){
-    	this.id = id;
-    	this.name = name;
-    	this.description = description;
-    }
+import java.io.Serializable;
 
-    // Getters and setters
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * Business objective description
+ * 
+ * @author Gwennael Bouteloup
+ */
+@Entity
+@Table(name = "objective")
+@SuppressWarnings("serial")
+public class Objective implements Serializable {
+	// Attributes
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", updatable = false, nullable = false)
+	private Integer id;
+
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "description")
+	private String description;
+
+	// Methods
+	// Constructors
+	/**
+	 * Default constructor
+	 */
+	public Objective() {
+	}
+
+	/**
+	 * Fill all attributes constructor
+	 * 
+	 * @param id
+	 * @param name
+	 * @param description
+	 */
+	public Objective(Integer id, String name, String description) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+	}
+
+	// Getters and setters
 	public Integer getId() {
 		return id;
 	}

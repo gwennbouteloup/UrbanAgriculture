@@ -134,11 +134,11 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`PhytosanitaryFightType` (
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- 10 Table `urbanAgriDB`.`FruitsAndVegetablesProducts`
+-- 10 Table `urbanAgriDB`.`FruitsAndVegetablesProduct`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts` ;
+DROP TABLE IF EXISTS `urbanAgriDB`.`FruitsAndVegetablesProduct` ;
 
-CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts` (
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProduct` (
   `id` INT NOT NULL,
   `name` VARCHAR(500) NULL DEFAULT NULL,
   `description` VARCHAR(1000) NULL DEFAULT NULL,
@@ -146,11 +146,11 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts` (
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- 11 Table `urbanAgriDB`.`FarmingProducts`
+-- 11 Table `urbanAgriDB`.`FarmingProduct`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `urbanAgriDB`.`FarmingProducts` ;
+DROP TABLE IF EXISTS `urbanAgriDB`.`FarmingProduct` ;
 
-CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FarmingProducts` (
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FarmingProduct` (
   `id` INT NOT NULL,
   `name` VARCHAR(500) NULL DEFAULT NULL,
   `description` VARCHAR(1000) NULL DEFAULT NULL,
@@ -392,7 +392,7 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`ProductionCriteria_OnGround` (
     ON UPDATE NO ACTION,
   CONSTRAINT `idFruitsAndVegetablesConstraint_ProductionCriteria_OnGround`
     FOREIGN KEY (idFruitsAndVegetables)
-    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProducts` (`id`)
+    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProduct` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `idIrrigationTypeConstraint_ProductionCriteria_OnGround`
@@ -440,7 +440,7 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`ProductionCriteria_OnRoof` (
     ON UPDATE NO ACTION,
   CONSTRAINT `idFruitsAndVegetablesConstraint_ProductionCriteria_OnRoof`
     FOREIGN KEY (`idFruitsAndVegetables`)
-    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProducts` (`id`)
+    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProduct` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `idIrrigationTypeConstraint_ProductionCriteria_OnRoof`
@@ -458,11 +458,11 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`ProductionCriteria_OnRoof` (
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- 21 Table `urbanAgriDB`.`FruitsAndVegetablesProducts_CommercialisationModeOnRooof`
+-- 21 Table `urbanAgriDB`.`FruitsAndVegetablesProduct_CommercialisationModeOnRooof`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts_CommercialisationModeOnRoof` ;
+DROP TABLE IF EXISTS `urbanAgriDB`.`FruitsAndVegetablesProduct_CommercialisationModeOnRoof` ;
 
-CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts_CommercialisationModeOnRoof` (
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProduct_CommercialisationModeOnRoof` (
   `idCompany` INT NOT NULL,
   `idCompanyLocation` INT NOT NULL,
   `idFruitsAndVegetables` INT NOT NULL,
@@ -480,7 +480,7 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts_Commercial
     ON UPDATE NO ACTION,
   CONSTRAINT `idFruitsAndVegetablesConstraint_FAV_ComModeRoof`
     FOREIGN KEY (idFruitsAndVegetables)
-    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProducts` (`id`)
+    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProduct` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `idCommercialisationModeConstraint_FAV_ComModeRoof`
@@ -491,11 +491,11 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts_Commercial
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- 22 Table `urbanAgriDB`.`FruitsAndVegetablesProducts_CommercialisationModeOnGround`
+-- 22 Table `urbanAgriDB`.`FruitsAndVegetablesProduct_CommercialisationModeOnGround`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts_CommercialisationModeOnGround` ;
+DROP TABLE IF EXISTS `urbanAgriDB`.`FruitsAndVegetablesProduct_CommercialisationModeOnGround` ;
 
-CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts_CommercialisationModeOnGround` (
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProduct_CommercialisationModeOnGround` (
   `idCompany` INT NOT NULL,
   `idCompanyLocation` INT NOT NULL,
   `idFruitsAndVegetables` INT NOT NULL,
@@ -513,7 +513,7 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts_Commercial
     ON UPDATE NO ACTION,
   CONSTRAINT `idFruitsAndVegetablesConstraint_FAV_ComModeGround`
     FOREIGN KEY (idFruitsAndVegetables)
-    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProducts` (`id`)
+    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProduct` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `idCommercialisationModeConstraint_FAV_ComModeGround`
@@ -524,16 +524,16 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FruitsAndVegetablesProducts_Commercial
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- 23 Table `urbanAgriDB`.`FarmingProducts_CommercialisationOnGround`
+-- 23 Table `urbanAgriDB`.`FarmingProduct_CommercialisationOnGround`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `urbanAgriDB`.`FarmingProducts_CommercialisationOnGround` ;
+DROP TABLE IF EXISTS `urbanAgriDB`.`FarmingProduct_CommercialisationOnGround` ;
 
-CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FarmingProducts_CommercialisationOnGround` (
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FarmingProduct_CommercialisationOnGround` (
   `idCompany` INT NOT NULL,
   `idCompanyLocation` INT NOT NULL,
   `idCommercialisationMode` INT NOT NULL,
-  `idFarmingProducts` INT NOT NULL,
-  PRIMARY KEY (`idCompany`,`idCompanyLocation`,`idCommercialisationMode`,`idFarmingProducts`),
+  `idFarmingProduct` INT NOT NULL,
+  PRIMARY KEY (`idCompany`,`idCompanyLocation`,`idCommercialisationMode`,`idFarmingProduct`),
   CONSTRAINT `idCompanyConstraint_FarmPdts_CommonOnGround`
     FOREIGN KEY (`idCompany`)
     REFERENCES `urbanAgriDB`.`CompanyLocation_OnGroundInstallation` (`idCompany`)
@@ -549,24 +549,24 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FarmingProducts_CommercialisationOnGro
     REFERENCES `urbanAgriDB`.`CommercializationMode` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
-  CONSTRAINT `idFarmingProductsConstraint_FarmPdts_CommonOnGround`
-    FOREIGN KEY (idFarmingProducts)
-    REFERENCES `urbanAgriDB`.`FarmingProducts` (`id`)
+  CONSTRAINT `idFarmingProductConstraint_FarmPdts_CommonOnGround`
+    FOREIGN KEY (idFarmingProduct)
+    REFERENCES `urbanAgriDB`.`FarmingProduct` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- 24 Table `urbanAgriDB`.`FarmingProducts_CommercialisationOnRoof`
+-- 24 Table `urbanAgriDB`.`FarmingProduct_CommercialisationOnRoof`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `urbanAgriDB`.`FarmingProducts_CommercialisationOnRoof` ;
+DROP TABLE IF EXISTS `urbanAgriDB`.`FarmingProduct_CommercialisationOnRoof` ;
 
-CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FarmingProducts_CommercialisationOnRoof` (
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FarmingProduct_CommercialisationOnRoof` (
   `idCompany` INT NOT NULL,
   `idCompanyLocation` INT NOT NULL,
   `idCommercialisationMode` INT NOT NULL,
-  `idFarmingProducts` INT NOT NULL,
-  PRIMARY KEY (`idCompany`,`idCompanyLocation`,`idCommercialisationMode`,`idFarmingProducts`),
+  `idFarmingProduct` INT NOT NULL,
+  PRIMARY KEY (`idCompany`,`idCompanyLocation`,`idCommercialisationMode`,`idFarmingProduct`),
   CONSTRAINT `idCompanyConstraint_FarmPdts_CommonOnRoof`
     FOREIGN KEY (`idCompany`)
     REFERENCES `urbanAgriDB`.`CompanyLocation_OnRoofInstallation` (`idCompany`)
@@ -582,13 +582,120 @@ CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`FarmingProducts_CommercialisationOnRoo
     REFERENCES `urbanAgriDB`.`CommercializationMode` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
-  CONSTRAINT `idFarmingProductsConstraint_FarmPdts_CommonOnRoof`
-    FOREIGN KEY (idFarmingProducts)
-    REFERENCES `urbanAgriDB`.`FarmingProducts` (`id`)
+  CONSTRAINT `idFarmingProductConstraint_FarmPdts_CommonOnRoof`
+    FOREIGN KEY (idFarmingProduct)
+    REFERENCES `urbanAgriDB`.`FarmingProduct` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- 25 Table `urbanAgriDB`.`Product_Commercialization_FruitsAndVegetables_CompanyOnRoof'
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `urbanAgriDB`.`Product_Commercialization_FruitsAndVegetables_CompanyOnRoof` ;
+
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`Product_Commercialization_FruitsAndVegetables_CompanyOnRoof` (
+  `idCompanyLocationOnRoof` INT NOT NULL,
+  `idCommercializationMode` INT NOT NULL,
+  `idFruitsAndVegetables` INT NOT NULL,
+  PRIMARY KEY (`idCompanyLocationOnRoof`,`idCommercializationMode`,`idFruitsAndVegetables`),
+  CONSTRAINT `idCompanyLocationOnRoofConstraint_PCFV`
+    FOREIGN KEY (`idCompanyLocationOnRoof`)
+    REFERENCES `urbanAgriDB`.`CompanyLocation_OnRoofInstallation` (`idCompany`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idCommercializationModeConstraint_PCFV`
+    FOREIGN KEY (`idCommercializationMode`)
+    REFERENCES `urbanAgriDB`.`CommercializationMode` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idFruitsAndVegetablesConstraint_PCFV`
+    FOREIGN KEY (`idFruitsAndVegetables`)
+    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProduct` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- 26 Table `urbanAgriDB`.`Product_Commercialization_FruitsAndVegetables_CompanyOnGround'
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `urbanAgriDB`.`Product_Commercialization_FruitsAndVegetables_CompanyOnGround` ;
+
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`Product_Commercialization_FruitsAndVegetables_CompanyOnGround` (
+  `idCompanyLocationOnGround` INT NOT NULL,
+  `idCommercializationMode` INT NOT NULL,
+  `idFruitsAndVegetables` INT NOT NULL,
+  PRIMARY KEY (`idCompanyLocationOnGround`,`idCommercializationMode`,`idFruitsAndVegetables`),
+  CONSTRAINT `idCompanyLocationOnGroundConstraint_PCOG`
+    FOREIGN KEY (`idCompanyLocationOnGround`)
+    REFERENCES `urbanAgriDB`.`CompanyLocation_OnGroundInstallation` (`idCompany`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idCommercializationModeConstraint_PCOG`
+    FOREIGN KEY (`idCommercializationMode`)
+    REFERENCES `urbanAgriDB`.`CommercializationMode` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idFruitsAndVegetablesConstraint_PCOG`
+    FOREIGN KEY (`idFruitsAndVegetables`)
+    REFERENCES `urbanAgriDB`.`FruitsAndVegetablesProduct` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- 27 Table `urbanAgriDB`.`Product_Commercialization_FarmingProduct_CompanyOnRoof'
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `urbanAgriDB`.`Product_Commercialization_FarmingProduct_CompanyOnRoof` ;
+
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`Product_Commercialization_FarmingProduct_CompanyOnRoof` (
+  `idCompanyLocationOnRoof` INT NOT NULL,
+  `idCommercializationMode` INT NOT NULL,
+  `idFarmingProduct` INT NOT NULL,
+  PRIMARY KEY (`idCompanyLocationOnRoof`,`idCommercializationMode`,`idFarmingProduct`),
+  CONSTRAINT `idCompanyLocationOnRoofConstraint_FarmOnRoof`
+    FOREIGN KEY (`idCompanyLocationOnRoof`)
+    REFERENCES `urbanAgriDB`.`CompanyLocation_OnRoofInstallation` (`idCompany`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idCommercializationModeConstraint_FarmOnRoof`
+    FOREIGN KEY (`idCommercializationMode`)
+    REFERENCES `urbanAgriDB`.`CommercializationMode` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idFarmingProduct_FarmOnRoof`
+    FOREIGN KEY (`idFarmingProduct`)
+    REFERENCES `urbanAgriDB`.`FarmingProduct` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- 28 Table `urbanAgriDB`.`Product_Commercialization_FarmingProduct_CompanyOnGround'
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `urbanAgriDB`.`Product_Commercialization_FarmingProduct_CompanyOnGround` ;
+
+CREATE TABLE IF NOT EXISTS `urbanAgriDB`.`Product_Commercialization_FarmingProduct_CompanyOnGround` (
+  `idCompanyLocationOnGround` INT NOT NULL,
+  `idCommercializationMode` INT NOT NULL,
+  `idFarmingProduct` INT NOT NULL,
+  PRIMARY KEY (`idCompanyLocationOnGround`,`idCommercializationMode`,`idFarmingProduct`),
+  CONSTRAINT `idCompanyLocationOnGroundConstraint_FarmOnGround`
+    FOREIGN KEY (`idCompanyLocationOnGround`)
+    REFERENCES `urbanAgriDB`.`CompanyLocation_OnGroundInstallation` (`idCompany`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idCommercializationModeConstraint_FarmOnGround`
+    FOREIGN KEY (`idCommercializationMode`)
+    REFERENCES `urbanAgriDB`.`CommercializationMode` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idFarmingProduct_FarmOnGround`
+    FOREIGN KEY (`idFarmingProduct`)
+    REFERENCES `urbanAgriDB`.`FarmingProduct` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
 -- -----------------------------------------------------
 -- CREATION OF TESTS DATA

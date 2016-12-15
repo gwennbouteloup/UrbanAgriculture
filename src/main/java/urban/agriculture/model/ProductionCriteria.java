@@ -3,14 +3,18 @@ package urban.agriculture.model;
 /**
  * The criteria used to characterized the production
  * 
- * @author Gwennaël Bouteloup
+ * @author Gwennael Bouteloup
  */
 public class ProductionCriteria {
 	// Attributes
 	private String description;
 	private CompanyLocation companyLocation;
+
+	// #GB_TO_DO# : to update regarding the best way to
+	// implements composed key and using objects for key
+	// using @Embeddable
 	private InstallationType installationType;
-	private FruitsAndVegetables fruitsAndVegetables;
+	private FruitsAndVegetablesProduct fruitsAndVegetables;
 	private IrrigationType irrigationType;
 	private FertilizationType fertilizationType;
 	private PhytosanitaryFightType phytosanitaryFightType;
@@ -31,8 +35,8 @@ public class ProductionCriteria {
 	 * @param installationType
 	 */
 	public ProductionCriteria(String description, CompanyLocation companyLocation, InstallationType installationType,
-			FruitsAndVegetables fruitsAndVegetables, IrrigationType irrigationType, FertilizationType fertilizationType,
-			PhytosanitaryFightType phytosanitaryFightType) {
+			FruitsAndVegetablesProduct fruitsAndVegetables, IrrigationType irrigationType,
+			FertilizationType fertilizationType, PhytosanitaryFightType phytosanitaryFightType) {
 		this.companyLocation = companyLocation;
 		this.description = description;
 		this.setFertilizationType(fertilizationType);
@@ -67,11 +71,11 @@ public class ProductionCriteria {
 		this.companyLocation = companyLocation;
 	}
 
-	public FruitsAndVegetables getFruitsAndVegetables() {
+	public FruitsAndVegetablesProduct getFruitsAndVegetables() {
 		return fruitsAndVegetables;
 	}
 
-	public void setFruitsAndVegetables(FruitsAndVegetables fruitsAndVegetables) {
+	public void setFruitsAndVegetables(FruitsAndVegetablesProduct fruitsAndVegetables) {
 		this.fruitsAndVegetables = fruitsAndVegetables;
 	}
 

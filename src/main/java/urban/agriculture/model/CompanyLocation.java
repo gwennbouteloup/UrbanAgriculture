@@ -1,18 +1,40 @@
 package urban.agriculture.model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.MappedSuperclass;
+
 /**
  * Do the link between companies and corresponding locations
  * 
  * @author Gwennael Bouteloup
  */
-public abstract class CompanyLocation {
+@MappedSuperclass
+@Embeddable
+@SuppressWarnings("serial")
+public abstract class CompanyLocation implements Serializable {
 	// Attributes
+	// #GB_TO_DO# : to update regarding the best way to
+	// implements composed key and using objects for key
+	// using @Embeddable
 	private Company company;
 	private InstallationLocation installationLocation;
+
+	@Column(name = "responsibleFirstName")
 	private String responsibleFirstName;
+
+	@Column(name = "responsibleName")
 	private String responsibleName;
+
+	@Column(name = "phoneNumber")
 	private String phoneNumber;
+
+	@Column(name = "employeesNumber")
 	private Integer employeesNumber;
+
+	@Column(name = "description")
 	private String description;
 
 	// Methods

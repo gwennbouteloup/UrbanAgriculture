@@ -1,36 +1,56 @@
 package urban.agriculture.model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * The type of installation used for a business
  * 
- * @author Gwennaël Bouteloup
+ * @author Gwennael Bouteloup
  */
-public class InstallationType {
+@Entity
+@Table(name = "installationtype")
+@SuppressWarnings("serial")
+public class InstallationType implements Serializable {
 	// Attributes
-    private Integer id;
-    private String name;
-    private String description;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", updatable = false, nullable = false)
+	private Integer id;
 
-    // Methods
-    /**
-     * Default constructor
-     */
-    public InstallationType() {
-    }
-    
-    /**
-     * Fill all fields constructor
-     * @param id
-     * @param name
-     * @param description
-     */
-    public InstallationType(Integer id,String name,String description){
-    	this.description = description;
-    	this.id = id;
-    	this.name = name;
-    }
+	@Column(name = "name")
+	private String name;
 
-    // Getters and setters
+	@Column(name = "description")
+	private String description;
+
+	// Methods
+	/**
+	 * Default constructor
+	 */
+	public InstallationType() {
+	}
+
+	/**
+	 * Fill all fields constructor
+	 * 
+	 * @param id
+	 * @param name
+	 * @param description
+	 */
+	public InstallationType(Integer id, String name, String description) {
+		this.description = description;
+		this.id = id;
+		this.name = name;
+	}
+
+	// Getters and setters
 	public Integer getId() {
 		return id;
 	}

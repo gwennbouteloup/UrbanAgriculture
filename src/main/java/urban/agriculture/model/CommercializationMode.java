@@ -1,37 +1,59 @@
 package urban.agriculture.model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Business commercialization mode
  * 
- * @author Gwennaël Bouteloup
+ * Define the selected commercialization mode for a product
+ * 
+ * @author Gwennael Bouteloup
  */
-public class CommercializationMode {
+@SuppressWarnings("serial")
+@Entity
+@Table(name = "CommercializationMode")
+public class CommercializationMode implements Serializable {
 	// Attributes
-    private Integer id;
-    private String description;
-    private String name;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", updatable = false, nullable = false)
+	private Integer id;
 
-    // Methods
-    // Constructors
-    /**
-     * Default constructor
-     */
-    public CommercializationMode() {
-    }
+	@Column(name = "name")
+	private String description;
 
-    /**
-     * Fill all fields constructor
-     * @param id
-     * @param description
-     * @param name
-     */
-    public CommercializationMode(Integer id, String description,String name){
-    	this.description = description;
-    	this.id = id;
-    	this.name = name;
-    }
+	@Column(name = "description")
+	private String name;
 
-    // Getters and setters
+	// Methods
+	// Constructors
+	/**
+	 * Default constructor
+	 */
+	public CommercializationMode() {
+	}
+
+	/**
+	 * Fill all fields constructor
+	 * 
+	 * @param id
+	 * @param description
+	 * @param name
+	 */
+	public CommercializationMode(Integer id, String description, String name) {
+		this.description = description;
+		this.id = id;
+		this.name = name;
+	}
+
+	// Getters and setters
 	public Integer getId() {
 		return id;
 	}

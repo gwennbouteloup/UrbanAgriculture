@@ -3,70 +3,76 @@ package urban.agriculture.model;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 /**
- *  The type of installation used for the business
- *  
- * @author Gwennaël Bouteloup 
+ * The type of installation used for the business
+ * 
+ * @author Gwennael Bouteloup
  */
 @SuppressWarnings("serial")
 @MappedSuperclass
-public abstract class Business_InstallationType implements Serializable{
+public abstract class Business_InstallationType implements Serializable {
 	// Attributes
+	// #GB_TO_DO# : to update regarding the best way to
+	// implements composed key and using objects for key
+	// using @Embeddable
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCompany", updatable = false, nullable = false)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "idCompany", updatable = false, nullable = false)
 	private Integer idCompany;
-	
-	@Column(name="idCompanyLocation")
-	private Integer idCompanyLocation; 
-	
-	@Column(name="idBusiness")
+
+	@Column(name = "idCompanyLocation")
+	private Integer idCompanyLocation;
+
+	@Column(name = "idBusiness")
 	private Integer idBusiness;
-	
-	@Column(name="idInstallationType")
+
+	@Column(name = "idInstallationType")
 	private Integer idInstallationType;
-	
+
 	// Methods
 	// Constructors
 	/**
 	 * Default constructor
 	 */
-	public Business_InstallationType(){
+	public Business_InstallationType() {
 	}
-	
+
 	/**
 	 * Fill all fields constructor
+	 * 
 	 * @param business
 	 * @param installationType
 	 * @param companyLocation
-	 * @throws Exception 
+	 * @throws Exception
 	 */
-	public Business_InstallationType(Business business,InstallationType installationType,CompanyLocation companyLocation) throws Exception{
-		if(business == null){
-			throw new Exception ("Business_InstallationType constructor: business passed in parameter is null");
+	public Business_InstallationType(Business business, InstallationType installationType,
+			CompanyLocation companyLocation) throws Exception {
+		if (business == null) {
+			throw new Exception("Business_InstallationType constructor: business passed in parameter is null");
 		}
-		if(installationType == null){
-			throw new Exception ("Business_InstallationType constructor: installationType passed in parameter is null");
+		if (installationType == null) {
+			throw new Exception("Business_InstallationType constructor: installationType passed in parameter is null");
 		}
-		if(companyLocation == null){
-			throw new Exception ("Business_InstallationType constructor: companyLocation passed in parameter is null");
+		if (companyLocation == null) {
+			throw new Exception("Business_InstallationType constructor: companyLocation passed in parameter is null");
 		}
-		
-		if(companyLocation.getCompany()!=null){
+
+		if (companyLocation.getCompany() != null) {
 			this.setIdCompany(companyLocation.getCompany().getId());
-		}else{
-			throw new Exception ("Business_InstallationType constructor: the Company linked to the  "
+		} else {
+			throw new Exception("Business_InstallationType constructor: the Company linked to the  "
 					+ "companyLocation passed in parameter is null");
 		}
-		if(companyLocation.getInstallationLocation()!=null){ 
+		if (companyLocation.getInstallationLocation() != null) {
 			this.setIdCompanyLocation(companyLocation.getInstallationLocation().getId());
-		}else{
-			throw new Exception ("Business_InstallationType constructor: the InstallationLocation linked to the  "
+		} else {
+			throw new Exception("Business_InstallationType constructor: the InstallationLocation linked to the  "
 					+ "companyLocation passed in parameter is null");
 		}
 		this.setIdBusiness(business.getId());
@@ -105,6 +111,5 @@ public abstract class Business_InstallationType implements Serializable{
 	public void setIdInstallationType(Integer idInstallationType) {
 		this.idInstallationType = idInstallationType;
 	}
-	
-	
+
 }

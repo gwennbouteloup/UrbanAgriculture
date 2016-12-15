@@ -11,6 +11,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "companylocation_ongroundinstallation")
+@SuppressWarnings("serial")
 public class CompanyLocation_OnGroundInstallation extends CompanyLocation {
 
 }

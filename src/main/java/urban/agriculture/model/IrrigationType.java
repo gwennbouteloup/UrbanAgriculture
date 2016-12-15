@@ -1,39 +1,59 @@
 package urban.agriculture.model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Type of irrigation used for a production
  * 
- * @author Gwennaël Bouteloup
+ * @author Gwennael Bouteloup
  */
-public class IrrigationType {
+@Entity
+@Table(name = "irrigationtype")
+@SuppressWarnings("serial")
+public class IrrigationType implements Serializable {
 	// Attributes
-    private Integer id;
-    private String name;
-    private String description;
-    
-    // Methods
-    // Constructors
-    /**
-     * Default constructor
-     */
-    public IrrigationType() {
-    }
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", updatable = false, nullable = false)
+	private Integer id;
 
-    /**
-     * Fill all attributes constructors
-     * @param id
-     * @param name
-     * @param description
-     * @param productionCriterias
-     */
-    public IrrigationType(Integer id,String name,String description){
-    	this.description = description;
-    	this.id = id;
-    	this.name = name;
-    	this.description = description;
-    }
-    
-    // Getters and setters
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "description")
+	private String description;
+
+	// Methods
+	// Constructors
+	/**
+	 * Default constructor
+	 */
+	public IrrigationType() {
+	}
+
+	/**
+	 * Fill all attributes constructors
+	 * 
+	 * @param id
+	 * @param name
+	 * @param description
+	 * @param productionCriterias
+	 */
+	public IrrigationType(Integer id, String name, String description) {
+		this.description = description;
+		this.id = id;
+		this.name = name;
+		this.description = description;
+	}
+
+	// Getters and setters
 	public Integer getId() {
 		return id;
 	}
@@ -57,5 +77,5 @@ public class IrrigationType {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-  
+
 }

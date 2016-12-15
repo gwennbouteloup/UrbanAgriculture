@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Define the global comportment of DAO for link and non link entities
  * 
- * @author Gwennaël Bouteloup
+ * @author Gwennael Bouteloup
  *
  * @param <T>
  */

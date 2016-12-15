@@ -1,36 +1,59 @@
 package urban.agriculture.model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Company: Business owner
- * @author Gwennaël Bouteloup
+ * 
+ * @author Gwennael Bouteloup
  */
-public class Company {
+@Entity
+@Table(name = "Company")
+@Embeddable
+@SuppressWarnings("serial")
+public class Company implements Serializable {
 	// Attributes
-    private Integer id;
-    private String name;
-    private String description;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", updatable = false, nullable = false)
+	private Integer id;
 
-    // Methods
-    // Constructors
-    /**
-     * Default constructor
-     */
-    public Company() {
-    }
-    
-    /**
-     * Fill all attributes constructor
-     * @param id
-     * @param name
-     * @param description
-     */
-    public Company(Integer id, String name, String description) {
-    	this.id = id;
-    	this.name = name;
-    	this.description = description;
-    }
+	@Column(name = "name")
+	private String name;
 
-    // Getters and setters
+	@Column(name = "description")
+	private String description;
+
+	// Methods
+	// Constructors
+	/**
+	 * Default constructor
+	 */
+	public Company() {
+	}
+
+	/**
+	 * Fill all attributes constructor
+	 * 
+	 * @param id
+	 * @param name
+	 * @param description
+	 */
+	public Company(Integer id, String name, String description) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+	}
+
+	// Getters and setters
 	public Integer getId() {
 		return id;
 	}

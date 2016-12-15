@@ -256,7 +256,7 @@
 								Flex, C, C++, C#, VB, VBA, Netbeans, Eclipse, Visual Studio,
 								Oracle, PostgreSQL... He has a deep knowledge in object oriented
 								and model driven technologies. His favorite technologies are
-								inside J2EE world (Java, EJB, Hibernate, Spring, ...). He has
+								inside J2EE world (Java, EJB, Spring, Hibernate, ...). He has
 								also a good knowledge in several methodologies (Merise, UML,
 								SOA, Scrum, ...) and in PLM (Windchill). He is also experienced
 								in Business Consulting and in project management. To know more

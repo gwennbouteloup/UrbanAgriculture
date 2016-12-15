@@ -1,28 +1,47 @@
 package urban.agriculture.model;
 
+import java.io.Serializable;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
 /**
  * Do the link between Objectives and Business
  * 
- * @author Gwennaël Bouteloup
+ * @author Gwennael Bouteloup
  */
-public class Objective_Business {
+
+@MappedSuperclass
+@SuppressWarnings("serial")
+public class Objective_Business implements Serializable {
 	// Attributes
+	// #GB_TO_DO# : to update regarding the best way to
+	// implements composed key and using objects for key
+	// using @Embeddable
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	// @Column(name = "id", updatable = false, nullable = false)
 	private Objective objective;
+
 	private Business business;
+
 	private CompanyLocation companyLocation;
-	
+
 	// Methods
 	// Constructors
-	public Objective_Business(){
+	public Objective_Business() {
 	}
-	
+
 	/**
 	 * Fill all attributes methods
+	 * 
 	 * @param objective
 	 * @param business
 	 * @param companyLocation
 	 */
-	public Objective_Business(Objective objective, Business business, CompanyLocation companyLocation){
+	public Objective_Business(Objective objective, Business business, CompanyLocation companyLocation) {
 		this.setBusiness(business);
 		this.setCompanyLocation(companyLocation);
 		this.setObjective(objective);

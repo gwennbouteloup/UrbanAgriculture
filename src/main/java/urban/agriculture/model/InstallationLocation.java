@@ -1,48 +1,73 @@
 package urban.agriculture.model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
 /**
  * The location of an installation
  * 
- * @author Gwennaël Bouteloup
+ * @author Gwennael Bouteloup
  */
-public abstract class InstallationLocation {
+@SuppressWarnings("serial")
+@MappedSuperclass
+public abstract class InstallationLocation implements Serializable {
 	// Attributes
-    private Integer id;
-    private String country;
-    private String address;
-    private Integer zipCode;
-    private String city;
-    private String description;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", updatable = false, nullable = false)
+	private Integer id;
 
-    // Methods
-    // Constructors
-    /**
-     * Default constructor
-     */
-    public InstallationLocation() {
-    }
-    
-    /**
-     * Fill all attributes constructor
-     * @param id
-     * @param country
-     * @param address
-     * @param zipCode
-     * @param city
-     * @param description
-     */
-    public InstallationLocation(Integer id, String country, String address, Integer zipCode, String city, String description){
-    	this.address = address;
-    	this.city = city;
-    	this.country = country;
-    	this.description = description;
-    	this.id = id;
-    	this.zipCode = zipCode;
-    }
-    	
-    // Methods
-    // Getters and setters
-    public Integer getId() {
+	@Column(name = "country")
+	private String country;
+
+	@Column(name = "address")
+	private String address;
+
+	@Column(name = "zipCode")
+	private Integer zipCode;
+
+	@Column(name = "city")
+	private String city;
+
+	@Column(name = "description")
+	private String description;
+
+	// Methods
+	// Constructors
+	/**
+	 * Default constructor
+	 */
+	public InstallationLocation() {
+	}
+
+	/**
+	 * Fill all attributes constructor
+	 * 
+	 * @param id
+	 * @param country
+	 * @param address
+	 * @param zipCode
+	 * @param city
+	 * @param description
+	 */
+	public InstallationLocation(Integer id, String country, String address, Integer zipCode, String city,
+			String description) {
+		this.address = address;
+		this.city = city;
+		this.country = country;
+		this.description = description;
+		this.id = id;
+		this.zipCode = zipCode;
+	}
+
+	// Methods
+	// Getters and setters
+	public Integer getId() {
 		return id;
 	}
 

@@ -1,43 +1,24 @@
 package urban.agriculture.model;
 
 /**
- *  Do the link between products and used commercialisation mode.
- *  
- * @author Gwennaël Bouteloup
+ * Do the link between products and used commercialisation mode.
+ * 
+ * @author Gwennael Bouteloup
  */
-public class Product_Commercialization {
+public abstract class Product_Commercialization {
 	// Attributes
-	private Product product;
+	// #GB_TO_DO# : to update regarding the best way to
+	// implements composed key and using objects for key
+	// using @Embeddable
 	private CommercializationMode commercializationMode;
-	private CompanyLocation companyLocation;
-	
+
 	// Methods
 	// Constructors
 	/**
 	 * Default constructor
 	 */
-	public Product_Commercialization(){	
-	}
-	
-	/**
-	 * Fill all attributes constructor
-	 * @param product
-	 * @param commercialisationMode
-	 * @param companyLocation
-	 */
-	public Product_Commercialization(Product product,CommercializationMode commercializationMode,CompanyLocation companyLocation){
-		this.commercializationMode = commercializationMode;
-		this.companyLocation = companyLocation;
-		this.product = product;
-	}
-	
-	// Getters and setters
-	public Product getProduct() {
-		return product;
-	}
-
-	public void setProduct(Product product) {
-		this.product = product;
+	public Product_Commercialization() {
+		this.commercializationMode = new CommercializationMode();
 	}
 
 	public CommercializationMode getCommercializationMode() {
@@ -46,13 +27,5 @@ public class Product_Commercialization {
 
 	public void setCommercialisationMode(CommercializationMode commercializationMode) {
 		this.commercializationMode = commercializationMode;
-	}
-
-	public CompanyLocation getCompanyLocation() {
-		return companyLocation;
-	}
-
-	public void setCompanyLocation(CompanyLocation companyLocation) {
-		this.companyLocation = companyLocation;
 	}
 }
