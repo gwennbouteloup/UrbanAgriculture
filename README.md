@@ -2,6 +2,20 @@ Urban Agriculture / Gwenn project
 =======================
 Please contact Gwenn to know more about this project :)
 
+Test the web app without installing development environment
+=======================
+1. Download the last version of the war working version inside "war working versions" directory
+2. Download tomcat last version, uncompress it and place the war (see step 1.) inside webapps directory
+3. Install MySQL last version and: 
+3.1. Open MySQL. Create a schema by running the database script creation using the "Create database script.sql" file inside database directory (for my own configuration i used mysql workbench which includes the access to the msql server)
+4. Start tomcat using "startup.bat" provided inside "tomcat start and stop" directory: You have to replace the original
+file included in "<your tomcat directory>\bin" by this one
+5. Launch the web app using following URL: "localhost:8080/UrbanAgriculture/" (MySQL server must be running)
+
+For developers 
+=======================
+Following sections are addressed to developers.
+If you want to use this base to expand it or to do what ever you want with it, have fun :) 
 
 Installation
 =======================
@@ -11,10 +25,9 @@ Installation
 
 .Instal Eclipse J2ee last version
 
-.Instal MySQL by downloading it from MySQL web site
+.Instal MySQL last version by downloading it from MySQL web site
 
-
-Configuration
+Environment Configuration
 =======================
 .Environment system variables: 
 ..CATALINA_HOME: put the location of your tomcat directory (for example: "C:\INSTALLS\apache-tomcat-9.0.0.M10")
@@ -26,12 +39,9 @@ Configuration
 .Eclipse JDK: 
 In eclipse Window menu/Java/Installed JREs: Add a reference to the jre directory inside your jdk directory (for example C:\Program Files (x86)\Java\jdk1.8.0_102\jre). Select this reference to be the one to use.
 	
-.Open MySQL. Run the database script creation using the "Create database script.sql" file inside database directory.
+.Open MySQL. Create a schema by running the database script creation using the "Create database script.sql" file inside database directory. 
 
-.Run MySQL server with an instance of the database.
-
-.Then run this configuration and enjoy!!! :)
-
+.Then run this configuration (MySQL server must be running) and enjoy!!! :)
 
 Running process
 =======================
@@ -41,5 +51,5 @@ Running process
 
 3. Right click on project and select run as / run on your tomcat server
 
-4. The web app is available in eclispe or in your favorite web browser on "http://localhost:8080/spring/" address.
+4. The web app is available in eclispe or in your favorite web browser on following URL: "http://localhost:8080/spring/" URL.
 
