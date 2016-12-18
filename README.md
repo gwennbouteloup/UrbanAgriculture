@@ -14,8 +14,10 @@ file included in "<your tomcat directory>\bin" by this one
 
 For developers 
 =======================
-Following sections are addressed to developers.
+Following sections are addressed to developers. 
 If you want to use this base to expand it or to do what ever you want with it, have fun :) 
+Warning: the latest version could be not stable. If it is the case, be sure that a previous version
+was working: Please refer to previous section. 
 
 Installation
 =======================
@@ -51,5 +53,5 @@ Running process
 
 3. Right click on project and select run as / run on your tomcat server
 
-4. The web app is available in eclispe or in your favorite web browser on following URL: "http://localhost:8080/spring/" URL.
+4. The web app is available in eclispe or in your favorite web browser on following URL: "http://localhost:8080/spring/".
 
