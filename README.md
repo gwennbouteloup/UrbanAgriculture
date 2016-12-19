@@ -16,7 +16,7 @@ For developers
 =======================
 Following sections are addressed to developers. 
 If you want to use this base to expand it or to do what ever you want with it, have fun :) 
-Warning: the latest version could be not stable. If it is the case, be sure that a previous version
+Warning: the latest version could be not stable. If it is the case, you can be sure that a previous version
 was working: Please refer to previous section. 
 
 Installation
