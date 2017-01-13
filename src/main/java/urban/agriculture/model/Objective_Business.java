@@ -15,11 +15,11 @@ import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 @SuppressWarnings("serial")
-public class Objective_Business implements Serializable {
+public abstract class Objective_Business implements Serializable {
 	// Attributes
-	// #GB_TO_DO# : to update regarding the best way to
-	// implements composed key and using objects for key
-	// using @Embeddable
+	// #GB_TO_DO# : to update using @EmbeddedId for composed primary keys
+	// And @JoinColumns({@JoinColumn( ...),...}) for foreign keys referencing
+	// composed primary keys
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	// @Column(name = "id", updatable = false, nullable = false)
@@ -42,9 +42,9 @@ public class Objective_Business implements Serializable {
 	 * @param companyLocation
 	 */
 	public Objective_Business(Objective objective, Business business, CompanyLocation companyLocation) {
-		this.setBusiness(business);
-		this.setCompanyLocation(companyLocation);
-		this.setObjective(objective);
+		this.business = business;
+		this.companyLocation = companyLocation;
+		this.objective = objective;
 	}
 
 	// Getters and setters

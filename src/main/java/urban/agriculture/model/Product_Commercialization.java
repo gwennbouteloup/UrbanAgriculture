@@ -1,15 +1,25 @@
 package urban.agriculture.model;
 
+import java.io.Serializable;
+
+import javax.persistence.MappedSuperclass;
+
 /**
  * Do the link between products and used commercialisation mode.
  * 
  * @author Gwennael Bouteloup
  */
-public abstract class Product_Commercialization {
+@MappedSuperclass
+@SuppressWarnings("serial")
+public abstract class Product_Commercialization implements Serializable {
+	// #GB_TO_DO# : to update using @EmbeddedId for composed primary keys
+	// And @JoinColumns({@JoinColumn( ...),...}) for foreign keys referencing
+	// composed primary keys
+	
 	// Attributes
-	// #GB_TO_DO# : to update regarding the best way to
-	// implements composed key and using objects for key
-	// using @Embeddable
+	// @Id
+	// @ManyToOne(optional = false)
+	// @JoinColumn(name = "idCommercializationMode")
 	private CommercializationMode commercializationMode;
 
 	// Methods
@@ -21,6 +31,11 @@ public abstract class Product_Commercialization {
 		this.commercializationMode = new CommercializationMode();
 	}
 
+	public Product_Commercialization(CommercializationMode commercializationMode) {
+		this.commercializationMode = commercializationMode;
+	}
+
+	// Accessors
 	public CommercializationMode getCommercializationMode() {
 		return commercializationMode;
 	}

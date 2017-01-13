@@ -16,41 +16,42 @@ import javax.persistence.Table;
  */
 @SuppressWarnings("serial")
 @Entity
-@Table(name="Business")
+@Table(name = "Business")
 public class Business implements Serializable {
 	// Attributes
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", updatable = false, nullable = false)
-    private Integer id;
-	
-	@Column(name="name")
-    private String name;
-	
-	@Column(name="description")
-    private String description;
+	private Integer id;
 
-    // Methods
-    // Constructors
-    /**
-     * Default constructor
-     */
-    public Business() {
-    }
-   
-    /**
-     * Fill all attributes parameter
-     * @param id
-     * @param name
-     * @param description
-     */
-    public Business (Integer id,String name,String description){
-    	this.setDescription(description);
-    	this.setId(id);
-    	this.setName(name);
-    }
+	@Column(name = "name")
+	private String name;
 
-    // Getters and setters
+	@Column(name = "description")
+	private String description;
+
+	// Methods
+	// Constructors
+	/**
+	 * Default constructor
+	 */
+	public Business() {
+	}
+
+	/**
+	 * Fill all attributes parameter
+	 * 
+	 * @param id
+	 * @param name
+	 * @param description
+	 */
+	public Business(Integer id, String name, String description) {
+		this.description = description;
+		this.id = id;
+		this.name = name;
+	}
+
+	// Getters and setters
 	public Integer getId() {
 		return id;
 	}

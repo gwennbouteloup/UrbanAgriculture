@@ -1,6 +1,5 @@
 package urban.agriculture.model;
 
-import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -11,7 +10,6 @@ import javax.persistence.Table;
  * @author Gwennael Bouteloup
  */
 @Entity
-@Embeddable
 @Table(name = "OnRoofInstallation")
 @SuppressWarnings("serial")
 public class OnRoofInstallation extends InstallationLocation {

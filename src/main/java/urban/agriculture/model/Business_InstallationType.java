@@ -3,7 +3,6 @@ package urban.agriculture.model;
 import java.io.Serializable;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,13 +13,12 @@ import javax.persistence.MappedSuperclass;
  * 
  * @author Gwennael Bouteloup
  */
-@SuppressWarnings("serial")
 @MappedSuperclass
+@SuppressWarnings("serial")
 public abstract class Business_InstallationType implements Serializable {
-	// Attributes
-	// #GB_TO_DO# : to update regarding the best way to
-	// implements composed key and using objects for key
-	// using @Embeddable
+	// #GB_TO_DO# : to update using @EmbeddedId for composed primary keys
+	// And @JoinColumns({@JoinColumn( ...),...}) for foreign keys referencing
+	// composed primary keys
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "idCompany", updatable = false, nullable = false)
@@ -64,19 +62,13 @@ public abstract class Business_InstallationType implements Serializable {
 		}
 
 		if (companyLocation.getCompany() != null) {
-			this.setIdCompany(companyLocation.getCompany().getId());
+			this.idCompany = companyLocation.getCompany().getId();
 		} else {
 			throw new Exception("Business_InstallationType constructor: the Company linked to the  "
 					+ "companyLocation passed in parameter is null");
 		}
-		if (companyLocation.getInstallationLocation() != null) {
-			this.setIdCompanyLocation(companyLocation.getInstallationLocation().getId());
-		} else {
-			throw new Exception("Business_InstallationType constructor: the InstallationLocation linked to the  "
-					+ "companyLocation passed in parameter is null");
-		}
-		this.setIdBusiness(business.getId());
-		this.setIdInstallationType(installationType.getId());
+		this.idBusiness = business.getId();
+		this.idInstallationType = installationType.getId();
 	}
 
 	// Getters and setters

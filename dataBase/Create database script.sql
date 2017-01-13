@@ -2,6 +2,8 @@
 -- 10/18/16 17:23:04
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
+-- #GB_TO_DO# : update the foreign keys: All the attributes of composed primary keys must be used as foreign keys
+-- inside the tables referencing entities identified by composed primary keys
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;

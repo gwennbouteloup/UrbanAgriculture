@@ -13,4 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "business_installationtype_onroof")
 public class Business_InstallationType_OnRoof extends Business_InstallationType {
+	// #GB_TO_DO# : to update using @EmbeddedId for composed primary keys
+	// And @JoinColumns({@JoinColumn( ...),...}) for foreign keys referencing
+	// composed primary keys
 }

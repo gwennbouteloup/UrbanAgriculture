@@ -10,9 +10,9 @@ public class ProductionCriteria {
 	private String description;
 	private CompanyLocation companyLocation;
 
-	// #GB_TO_DO# : to update regarding the best way to
-	// implements composed key and using objects for key
-	// using @Embeddable
+	// #GB_TO_DO# : to update using @EmbeddedId for composed primary keys
+	// And @JoinColumns({@JoinColumn( ...),...}) for foreign keys referencing
+	// composed primary keys
 	private InstallationType installationType;
 	private FruitsAndVegetablesProduct fruitsAndVegetables;
 	private IrrigationType irrigationType;
@@ -39,11 +39,11 @@ public class ProductionCriteria {
 			FertilizationType fertilizationType, PhytosanitaryFightType phytosanitaryFightType) {
 		this.companyLocation = companyLocation;
 		this.description = description;
-		this.setFertilizationType(fertilizationType);
+		this.fertilizationType = fertilizationType;
 		this.fruitsAndVegetables = fruitsAndVegetables;
 		this.installationType = installationType;
-		this.setIrrigationType(irrigationType);
-		this.setPhytosanitaryFightType(phytosanitaryFightType);
+		this.irrigationType = irrigationType;
+		this.phytosanitaryFightType = phytosanitaryFightType;
 	}
 
 	// Getters and setters

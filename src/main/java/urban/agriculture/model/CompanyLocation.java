@@ -3,7 +3,9 @@ package urban.agriculture.model;
 import java.io.Serializable;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 
 /**
@@ -12,15 +14,17 @@ import javax.persistence.MappedSuperclass;
  * @author Gwennael Bouteloup
  */
 @MappedSuperclass
-@Embeddable
 @SuppressWarnings("serial")
 public abstract class CompanyLocation implements Serializable {
+	// #GB_TO_DO# : to update using @EmbeddedId for composed primary keys
+	// And @JoinColumns({@JoinColumn( ...),...}) for foreign keys referencing
+	// composed primary keys
+
 	// Attributes
-	// #GB_TO_DO# : to update regarding the best way to
-	// implements composed key and using objects for key
-	// using @Embeddable
+	@Id
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "idCompany")
 	private Company company;
-	private InstallationLocation installationLocation;
 
 	@Column(name = "responsibleFirstName")
 	private String responsibleFirstName;
@@ -49,22 +53,20 @@ public abstract class CompanyLocation implements Serializable {
 	 * Fill all attributes constructor
 	 * 
 	 * @param company
-	 * @param installationLocation
 	 * @param responsibleFirstName
 	 * @param responsibleName
 	 * @param phoneNumber
 	 * @param employeesNumber
 	 * @param description
 	 */
-	public CompanyLocation(Company company, InstallationLocation installationLocation, String responsibleFirstName,
-			String responsibleName, String phoneNumber, Integer employeesNumber, String description) {
-		this.setCompany(company);
-		this.setDescription(description);
-		this.setEmployeesNumber(employeesNumber);
-		this.setInstallationLocation(installationLocation);
-		this.setPhoneNumber(phoneNumber);
-		this.setResponsibleFirstName(responsibleFirstName);
-		this.setResponsibleName(responsibleName);
+	public CompanyLocation(Company company, String responsibleFirstName, String responsibleName, String phoneNumber,
+			Integer employeesNumber, String description) {
+		this.company = company;
+		this.description = description;
+		this.employeesNumber = employeesNumber;
+		this.phoneNumber = phoneNumber;
+		this.responsibleFirstName = responsibleFirstName;
+		this.responsibleName = responsibleName;
 	}
 
 	// Getters and setters
@@ -74,14 +76,6 @@ public abstract class CompanyLocation implements Serializable {
 
 	public void setCompany(Company company) {
 		this.company = company;
-	}
-
-	public InstallationLocation getInstallationLocation() {
-		return installationLocation;
-	}
-
-	public void setInstallationLocation(InstallationLocation installationLocation) {
-		this.installationLocation = installationLocation;
 	}
 
 	public String getResponsibleFirstName() {

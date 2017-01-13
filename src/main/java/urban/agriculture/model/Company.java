@@ -3,7 +3,6 @@ package urban.agriculture.model;
 import java.io.Serializable;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +16,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Company")
-@Embeddable
 @SuppressWarnings("serial")
 public class Company implements Serializable {
 	// Attributes

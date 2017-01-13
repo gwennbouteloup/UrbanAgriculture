@@ -99,7 +99,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav" id="navigation">
 					<li><a href="#about">About</a></li>
-					<li><a href="#team">The developper</a></li>
+					<li><a href="#team">The developer</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
